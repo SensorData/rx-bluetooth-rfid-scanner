@@ -143,7 +143,7 @@ public class RxBluetoothRfidScannerModule extends ReactContextBaseJavaModule imp
                     }
                 }
                 WritableMap map = Arguments.createMap();
-                map.putString("keycode", keycode);
+                map.putString("keycode", String.valueOf(keycode));
                 sendEvent("BLE_EVENT", Utils.convertParams("TRIGGER_PULLED", map));
             }
         });
